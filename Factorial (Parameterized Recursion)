@@ -1,0 +1,14 @@
+// Factorial using Parameterized Recursion
+#include <iostream>
+using namespace std;
+void f(int i,int pro){
+    if (i==0){
+        cout <<pro;
+        return;
+    }
+    f(i-1,pro*i);
+}
+int main() {
+    int n=4;
+    f(n,1);
+}

@@ -1,0 +1,23 @@
+//Character Hashing (All Characters and Symbols)
+#include <iostream>
+using namespace std;
+int main() {
+    string s;
+    cout <<"Enter String :";
+    cin >>s;
+    //PreComputing
+    int hash[256]={0};
+    for (int i=0;i<s.size();i++){
+        hash[s[i]]++;
+    }
+    int q;
+    cout <<"Enter queries :";
+    cin>>q;
+    while(q--){
+        char c;
+        cin >>c;
+        //Fetching
+        cout <<hash[c]<<endl;
+    }
+    return 0;
+}

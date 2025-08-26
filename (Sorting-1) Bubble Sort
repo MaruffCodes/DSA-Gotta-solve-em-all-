@@ -1,0 +1,35 @@
+// Sorting using Bubble Sort
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n=6;
+    int arr[n]={13,46,24,52,20,9};
+    cout <<"Arr :";
+    for (int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    
+    //Bubble Sort
+    for (int i=n-1;i>=1;i--){
+        int didSwap=0; //for optimization (if arr is already sorted)
+        for (int j=0;j<i;j++){
+            if (arr[j]>arr[j+1]){
+                int temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+                didSwap=1;
+            }
+        }
+        if (didSwap==0){
+            break;
+        }
+        cout<<"\nruns";
+    }
+    
+    cout <<endl<<"Sorted arr :";
+    for (int i=0;i<n;i++)
+        cout <<arr[i]<<" ";
+
+    return 0;
+}
